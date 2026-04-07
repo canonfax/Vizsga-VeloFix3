@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velofix - Kerékpár szervíz Időpontfoglaló</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon-wrap">🚴</div>
+          <div class="logo-text">
+            <div class="logo-title">VELOFIX</div>
+            <div class="logo-sub">Kerékpár szervíz</div>
+          </div>
+        </a>
+        <nav class="header-nav">
+          <a href="index.html">Foglalás</a>
+          <a href="Admin/index.html" class="nav-admin">⚙ Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">Online Időpontfoglaló</div>
+        <h1>Kerékpár szervíz<br><em>amit megbízhatsz</em></h1>
+        <p>Válassz szakembereink közül, és foglalj időpontot percek alatt - online, sorbanállás nélkül.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="n">3</div><div class="l">Szakember</div></div>
+          <div class="hero-stat"><div class="n">1200+</div><div class="l">Elégedett ügyfél</div></div>
+          <div class="hero-stat"><div class="n">4.9★</div><div class="l">Értékelés</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÉPÉS JELZŐ -->
+    <div class="step-bar">
+      <div class="step-bar-inner">
+        <div class="step-item active" id="step-1">
+          <div class="step-dot">1</div>
+          <span>Szerelő</span>
+        </div>
+        <div class="step-line" id="line-1"></div>
+        <div class="step-item" id="step-2">
+          <div class="step-dot">2</div>
+          <span>Időpontfoglalás</span>
+        </div>
+        <div class="step-line" id="line-2"></div>
+        <div class="step-item" id="step-3">
+          <div class="step-dot">3</div>
+          <span>Visszajelzés</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- APP -->
+    <div id="app"></div>
+
+    <!-- SERVICES -->
+    <div class="services-strip">
+      <div class="services-inner">
+        <div class="service-item"><span class="icon">🔧</span><h4>Általános szervíz</h4><p>Teljes átvizsgálás, kenés, beállítás</p></div>
+        <div class="service-item"><span class="icon">⚡</span><h4>E-bike szervíz</h4><p>Elektromos diagnosztika és javítás</p></div>
+        <div class="service-item"><span class="icon">🛞</span><h4>Kerék javítás</h4><p>Defektragasztás, centírozás</p></div>
+        <div class="service-item"><span class="icon">🏆</span><h4>Verseny felkészítés</h4><p>Versenykerékpár optimalizálás</p></div>
+        <div class="service-item"><span class="icon">🎨</span><h4>Egyedi festés</h4><p>Egyedi design és lakkozás</p></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 2026 VELOFIX KERÉKPÁR SZERVÍZ · MINDEN JOG FENNTARTVA</p>
+    </footer>
+
+    <div class="toast-container" id="toasts"></div>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/calendar.js"></script>
+    <script src="JS/timeslots.js"></script>
+    <script src="JS/app.js"></script>
+    
+</body>
+</html>
