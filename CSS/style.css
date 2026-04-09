@@ -306,3 +306,70 @@ input, select {font-family: inherit;}
 }
 
 /* Gomb */
+.btn-primary {
+    background: transparent;
+    border: 1px solid var(--cyan-dim);
+    color: var(--cyan);
+    border-radius: var(--r);
+    padding: .65rem 1.25rem;
+    font-family: var(--font-display);
+    font-size: .78rem; font-weight: 600;
+    letter-spacing: .08em; text-transform: uppercase;
+    transition: all var(--t);
+    display: flex; align-items: center; justify-content: center; gap: .5rem;
+}
+.btn-primary:hover:not(:disabled) {
+    background: var(--cyan-glow);
+    border-color: var(--cyan);
+    box-shadow: 0 0 16px var(--cyan-glow);
+    color: #fff;
+}
+.btn-primary:disabled {opacity: .3; cursor: not-allowed;}
+
+.btn-submit {
+    width: 100%;
+    background: rgba(0,212,255,0.8);
+    border: 1px solid var(--cyan-dim);
+    padding: .85rem;
+    font-size: .85rem;
+}
+.btn-submit:not(:disabled):hover {
+    background: rgba(0,212,255,.08);
+    box-shadow: 0 0 24px var(--cyan-glow);
+}
+.btn-arrow {margin-left: auto;}
+
+.btn-back {
+    background: none; border: 1px solid var(--border);
+    color: var(--text-dim); border-radius: var(--r);
+    padding: .4rem .9rem; font-size: .8rem;
+    font-family: inherit; letter-spacing: .04em;
+    transition: all var(--t); margin-bottom: 1.5rem; display: inline-block;
+}
+.btn-back:hover {border-color: var(--text-dim); color: var(--text);}
+
+/* Foglalás */
+.booking-who {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--cyan);
+    border-radius: var(--r);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+.bw-label {font-size: .68rem; color: var(--cyan); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .25rem;}
+.bw-none {font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #e8f4ff;}
+.bw-hours {font-size: .82rem; color: var(--text-dim); margin-top: .15rem;}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 1.5rem;
+    align-items: start;
+}
+@media (max-width: 900px) {.booking-layout {grid-template-columns: 1fr;}}
+
+.booking-left {display: flex; flex-direction: column; gap: 1rem;}
+.booking-right {display: flex; flex-direction: column; gap: 1rem; position: sticky; top: 80px;}
+
+/* Panel */
