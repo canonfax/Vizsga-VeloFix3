@@ -432,3 +432,74 @@ input, select {font-family: inherit;}
 .cal-cell.disabled {color: var(--text-muted); cursor: default; font-size: .75rem;}
 
 /* Slotok */
+.slots-loading {
+    display: flex; align-items: center; gap: .6rem;
+    color: var(--text-dim); font-size: .85rem;
+    padding: .5rem 0;
+}
+.slots-empty {color: var(--text-dim); font-size: .85rem;}
+.slots-grid {display: flex; flex-wrap: wrap; gap: .5rem;}
+.slot-btn {
+    background: var(--bg3); border: 1px solid var(--border);
+    color: var(--text); border-radius: var(--r);
+    padding: .4rem .85rem; font-size: .82rem;
+    font-family: var(--font-display); font-weight: 600;
+    letter-spacing: .04em;
+    transition: all var(--t);
+}
+.slot-btn:hover {border-color: var(--cyan-dim); color: var(--cyan); background: var(--cyan-glow2);}
+.slot-btn.active {
+    background: var(--cyan-glow); border-color: var(--cyan);
+    color: var(--cyan); box-shadow: 0 0 8px var(--cyan-glow);
+}
+
+/* Form */
+.form-group {display: flex; flex-direction: column; gap: .4rem; margin-bottom: .85rem;}
+.form-group:last-child {margin-bottom: 0;}
+.form-group label {
+    font-size: .68rem; font-weight: 700;
+    color: var(--text-dim); letter-spacing: .1em; text-transform: uppercase;
+}
+.form-group input
+.form-group select {
+    background: var(--bg3); border: 1px solid var(--border);
+    border-radius: var(--r); padding: .6rem .85rem;
+    color: var(--text); font-size: .9rem;
+    transition: border-color var(--t), box-shadow var(--t);
+    width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--cyan-dim);
+    box-shadow: 0 0 8px var(--cyan-glow);
+}
+.form-group select option {background: var(--bg2);}
+
+/* Összefoglaló */
+.summary-panel {border-left: 2px solid var(--cyan-dim);}
+.sum-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: .45rem 0; font-size: .85rem;
+    border-bottom: 1px solid var(--border2);
+}
+.sum-row:last-child {border-bottom: none;}
+.sum-row span {color: var(--text-dim); font-size: .78rem; letter-spacing: .04em;}
+.sum-row strong {color: var(--text); font-weight: 600;}
+
+/* Siker */
+.success-wrap {
+    max-width: 540px; margin: 3rem auto; text-align: center;
+    animation: fadeUp .5s ease;
+}
+@keyframes fadeUp {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: none;}}
+
+.success-icon {
+    width: 80px; margin: 0 auto 1.5rem;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: var(--green);
+    box-shadow: 0 0 30px rgba(0, 255, 136, .2); inset: 0 0 20px rgba(0,255,136,.05rem);
+    animation: pilse-gree 2s infinite;
+}
