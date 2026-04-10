@@ -3,7 +3,7 @@
 // ═══════════════════════════════════════════
 
 const CONFIG = {
-  API_BASE : 'http://salonsapi.prooktatas.hu',   // ← base URL az /api nélkül!
+  API_BASE : 'http://salonsapi.prooktatas.hu',   // base URL /api nélkül
   API_KEY  : 'velofix2026',
   SLOT_MIN : 30,
 };
