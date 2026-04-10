@@ -271,7 +271,7 @@ input, select {font-family: inherit;}
     padding: 1.75rem 1.5rem;
     display: flex; flex-direction: column; gap: .85rem;
     position: relative; overflow: hidden;
-    transition: transform var(--t), border-color var(--t), box-shadow var(t);
+    transition: transform var(--t), border-color var(--t), box-shadow var(--t);
     cursor: pointer;
 }
 .mech-card:hover {
@@ -460,7 +460,7 @@ input, select {font-family: inherit;}
     font-size: .68rem; font-weight: 700;
     color: var(--text-dim); letter-spacing: .1em; text-transform: uppercase;
 }
-.form-group input
+.form-group input,
 .form-group select {
     background: var(--bg3); border: 1px solid var(--border);
     border-radius: var(--r); padding: .6rem .85rem;
@@ -500,7 +500,7 @@ input, select {font-family: inherit;}
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 2rem; color: var(--green);
-    box-shadow: 0 0 30px rgba(0, 255, 136, .2); inset: 0 0 20px rgba(0,255,136,.05rem);
+    box-shadow: 0 0 30px rgba(0, 255, 136, .2), inset 0 0 20px rgba(0,255,136,.05);
     animation: pulse-green 2s infinite;
 }
 @keyframes pulse-green {
