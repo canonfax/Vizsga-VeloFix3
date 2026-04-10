@@ -17,19 +17,20 @@ const API = {
   },
 
   // GET /appointments/:api_key
+  // 401 = még nincs mentett foglalás ezzel a kulccsal → üres tömb, nem hiba
   async getAppointments() {
     try {
       const r = await fetch(`${CONFIG.API_BASE}/appointments/${CONFIG.API_KEY}`);
+      if (r.status === 401 || r.status === 404) return [];
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return await r.json();
     } catch (e) {
-      console.error('[API] getAppointments:', e.message);
+      console.warn('[API] getAppointments:', e.message);
       return [];
     }
   },
 
   // POST /appointments
-  // A szerver form-urlencoded-et vár (a JSON példa a doksiban hibás szintaxisú)
   async createAppointment({ hairdresserId, customerName, customerPhone, appointmentDate, service }) {
     try {
       const body = new URLSearchParams({
@@ -37,7 +38,7 @@ const API = {
         api_key          : CONFIG.API_KEY,
         customer_name    : customerName,
         customer_phone   : customerPhone,
-        appointment_date : appointmentDate,   // 'YYYY-MM-DD HH:MM:00'
+        appointment_date : appointmentDate,
         service          : service,
       });
 
@@ -59,7 +60,7 @@ const API = {
     }
   },
 
-  // Foglalt slotok szűrése egy napra és szerelőre
+  // Foglalt slotok egy napra és szerelőre
   async getBookedSlots(hairdresserId, dateStr) {
     const all = await this.getAppointments();
     return all
